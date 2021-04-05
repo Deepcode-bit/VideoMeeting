@@ -1,0 +1,23 @@
+﻿@using VideoMeeting.Component
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/login_style.css" />
+    <link rel="stylesheet" href="~/css/login_style2.css" />
+</head>
+<body>
+    <component type="typeof(LoginForm)" render-mode="ServerPrerendered" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="_framework/blazor.server.js"></script>
+    <script src="~/js/site.js"></script>
+</body>
+</html>

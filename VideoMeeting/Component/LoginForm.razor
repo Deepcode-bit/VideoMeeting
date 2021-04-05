@@ -1,0 +1,50 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.JSInterop;
+@using VideoMeeting.Models;
+@using VideoMeeting.Repositories;
+@inject IUserRepository userRepositry
+@inject IJSRuntime JS
+
+<div class="container box">
+    <h2 class="title">视频会议系统</h2>
+    <form>
+        <div class="inputBox">
+            <input type="text" required @bind="user.UserName">
+            <label>用户名</label>
+        </div>
+        <div class="inputBox">
+            <input required type="password" @bind="user.Password">
+            <label>密码</label>
+        </div>
+    </form>
+    <button class="@Butclass" @onclick="OnLogin" id="loginBut">
+        <p>登录</p>
+        <div class="loading">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <svg class="checkmark" width='30px' height='30px' stroke='white' fill='none'>
+            <polyline points='2,10,12,18,28,2'></polyline>
+        </svg>
+    </button>
+    <h4>@errMsg</h4>
+</div>
+
+@code{
+    public string Butclass = "login";
+    public User user { get; set; } = new User();
+    public string errMsg { get; set; }
+    public async Task OnLogin()
+    {
+        Butclass += " active";
+        await Task.Delay(TimeSpan.FromSeconds(2));
+        Butclass = userRepositry.Login(user) ? "login active verity" : "login";
+        if (user.LoginMsg.Equals(string.Empty))
+        {
+            await JS.InvokeVoidAsync("alert", "登录成功");
+        }
+        errMsg = user.LoginMsg;
+    }
+}
+
