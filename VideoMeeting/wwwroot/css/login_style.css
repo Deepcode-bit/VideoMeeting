@@ -14,6 +14,9 @@
     cursor: pointer;
 }
 
+.login p {
+  margin: 0;
+}
 .active.login{
     width: 5rem;
     color: transparent;
@@ -68,7 +71,7 @@
 
 .verity .checkmark{
     animation: .6s show forwards;
-    animation-delay: .4s;
+    animation-delay: .1s;
 }
 
 .verity .loading{

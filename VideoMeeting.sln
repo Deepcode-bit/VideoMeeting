@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoMeeting", "VideoMeeting\VideoMeeting.csproj", "{FEAC413C-7CFA-4E78-9126-FC1FA870874F}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoMeeting.Model", "ViedoMeeting.Model\VideoMeeting.Model.csproj", "{701C8F4A-9064-4A00-8AFF-9B8D015BE532}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoMeeting.Repositories", "VideoMeeting.Repositories\VideoMeeting.Repositories.csproj", "{E72BF2B0-3BB0-4269-B5F7-E8EB623086A2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VideoMeeting.Service", "VideoMeeting.Service\VideoMeeting.Service.csproj", "{7EE3316A-DA2A-4B0C-989D-BB4D3088A029}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{FEAC413C-7CFA-4E78-9126-FC1FA870874F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FEAC413C-7CFA-4E78-9126-FC1FA870874F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FEAC413C-7CFA-4E78-9126-FC1FA870874F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{701C8F4A-9064-4A00-8AFF-9B8D015BE532}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{701C8F4A-9064-4A00-8AFF-9B8D015BE532}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{701C8F4A-9064-4A00-8AFF-9B8D015BE532}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{701C8F4A-9064-4A00-8AFF-9B8D015BE532}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E72BF2B0-3BB0-4269-B5F7-E8EB623086A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E72BF2B0-3BB0-4269-B5F7-E8EB623086A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E72BF2B0-3BB0-4269-B5F7-E8EB623086A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E72BF2B0-3BB0-4269-B5F7-E8EB623086A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE3316A-DA2A-4B0C-989D-BB4D3088A029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE3316A-DA2A-4B0C-989D-BB4D3088A029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE3316A-DA2A-4B0C-989D-BB4D3088A029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE3316A-DA2A-4B0C-989D-BB4D3088A029}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

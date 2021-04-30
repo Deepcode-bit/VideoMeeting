@@ -1,19 +1,21 @@
 ﻿@using Microsoft.AspNetCore.Components.Web
 @using Microsoft.JSInterop;
-@using VideoMeeting.Models;
-@using VideoMeeting.Repositories;
-@inject IUserRepository userRepositry
+@using VideoMeeting.Model;
+@using VideoMeeting.Service.IService
+@using Microsoft.AspNetCore.WebUtilities;
+
+@inject IUserService service
 @inject IJSRuntime JS
 
 <div class="container box">
     <h2 class="title">视频会议系统</h2>
     <form>
         <div class="inputBox">
-            <input type="text" required @bind="user.UserName">
+            <input type="text" required @bind="user.Name">
             <label>用户名</label>
         </div>
         <div class="inputBox">
-            <input required type="password" @bind="user.Password">
+            <input required type="password" @bind="user.Password" autocomplete="new-password">
             <label>密码</label>
         </div>
     </form>
@@ -28,6 +30,7 @@
             <polyline points='2,10,12,18,28,2'></polyline>
         </svg>
     </button>
+    <a href="home">跳转</a>
     <h4>@errMsg</h4>
 </div>
 
@@ -38,13 +41,15 @@
     public async Task OnLogin()
     {
         Butclass += " active";
-        await Task.Delay(TimeSpan.FromSeconds(2));
-        Butclass = userRepositry.Login(user) ? "login active verity" : "login";
-        if (user.LoginMsg.Equals(string.Empty))
+        await Task.Delay(TimeSpan.FromSeconds(0.5));
+        var loginMsg = await service.Login(user);
+        Butclass = loginMsg == "登录成功" ? "login active verity" : "login";
+        if (loginMsg == "登录成功")
         {
-            await JS.InvokeVoidAsync("alert", "登录成功");
+            await JS.InvokeVoidAsync("Navigation", "/home");
+            return;
         }
-        errMsg = user.LoginMsg;
+        errMsg = loginMsg;
     }
 }
 

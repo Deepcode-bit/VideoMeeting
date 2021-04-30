@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+}
+
+html,body{
+    background-color: #F5F5F5;
+    height: 100%;
+}
+
+.page-header{
+    background-color: #fff;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px;
+    padding: 20px;
+}
+
+.page-header img{
+    width: 40px;
+    margin-right: 10px;
+}
+
+.icon-but{
+    padding: 5px;
+    color: black;
+}
+
+.icon-but span{
+    padding: 5px;
+    color: #3F8CFF;
+}
+
+.layui-nav {
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+}
+.layui-nav .layui-nav-item a,
+.layui-nav-tree .layui-nav-child a,
+.layui-nav-tree .layui-nav-item a{
+    color: black;
+}
+
+.layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+    color: black;
+}
+
+.layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+    color: red;
+}
+
+a:hover{
+    color: black;
+}
+
+.layui-nav .layui-nav-item a:hover, .layui-nav .layui-this a{
+    color: black;
+}
+
+.layui-nav-itemed>a, .layui-nav-tree .layui-nav-title a, .layui-nav-tree .layui-nav-title a:hover{
+    color: #000!important;
+}
+
+.layui-bg-blue .layui-nav-itemed>a, .layui-nav-tree.layui-bg-blue .layui-nav-title a, .layui-nav-tree.layui-bg-blue,
+.layui-bg-blue{
+    background-color: #fff!important;
+}
+
+.layui-nav-child a{
+    background-color: #BFBFBF
+}
+
+.layui-nav-item :hover{
+    background-color: #DFF0FF!important;
+    color: #fff;
+}
+
+.layui-nav .layui-nav-child dd.layui-this a, .layui-nav-child dd.layui-this{
+    background-color: #3F8CFF;
+}
+
+.flex-box {
+    height:100%;
+    display: flex;
+    align-items: center;
+}
+
+.main-box {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}

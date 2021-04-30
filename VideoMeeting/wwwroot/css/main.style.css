@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+}
+body{
+    background-color: #F5F5F5;
+}
+
+.head-box{
+    margin: 20px;
+}
+
+.font-box{
+    align-self:flex-end;
+    float: right;
+    color: blue;
+}
+
+.meeting-box{
+    margin: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+.table thead{
+    background-color: #DEDDDD;
+}
+
+.meet-state{
+    color: #3E7554;
+    font-weight: bold;
+}
+
+.glyphicon{
+    color: #1975FF;
+    font-size: 14px;
+}
+
+.forward{
+    display: flex;
+    align-items: center;
+}
+
+.form-control{
+    width: 50px;
+    height: 25px;
+}
+
+.flex-box2{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.Page{
+    padding-right: 20px;
+}
+
+.table-head-box{
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-box .btn{
+    margin: 5px;
+}
+

@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -9,6 +10,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using VideoMeeting.Repositories;
+using VideoMeeting.Repositories.IRepository;
+using VideoMeeting.Repositories.RepositoryImp;
+using VideoMeeting.Service.IService;
+using VideoMeeting.Service.ServiceImp;
 
 namespace VideoMeeting
 {
@@ -27,7 +32,10 @@ namespace VideoMeeting
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddControllersWithViews();
-            services.AddSingleton<IUserRepository, UserRepository>();
+            services.AddDbContext<OracleDBContext>(options => 
+            options.UseOracle(Configuration.GetConnectionString("OracleDBContext"), b => b.UseOracleSQLCompatibility("11")));
+            services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
+            services.AddScoped<IUserService, UserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,7 +65,7 @@ namespace VideoMeeting
                 endpoints.MapBlazorHub();
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Login}/{id?}");
+                    pattern: "{controller=Login}/{action=index}/{id?}");
             });
         }
     }

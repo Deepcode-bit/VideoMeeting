@@ -1,6 +1,6 @@
 using System;
 
-namespace VideoMeeting.Models
+namespace VideoMeeting.Model
 {
     public class ErrorViewModel
     {

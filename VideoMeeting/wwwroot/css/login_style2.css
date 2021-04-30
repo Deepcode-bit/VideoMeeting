@@ -44,16 +44,23 @@ body {
 .box .inputBox{
     position: relative;
 }
-.box .inputBox input{
-    width: 100%;
-    padding: 10px 0;
-    font-size: 15px;
-    color: #fff;
-    border: none;
-    margin-bottom: 30px;
-    outline: none;
-    background: transparent;
-    border-bottom: 1px solid #fff;        
+    .box .inputBox input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 15px;
+        color: #fff;
+        border: none;
+        margin-bottom: 30px;
+        outline: none;
+        background: transparent;
+        border-bottom: 1px solid #fff;
+    }
+
+input:-internal-autofill-selected {
+    appearance:inherit;
+    background-color:red !important;
+    background-image:unset !important;
+    color: transparent !important;
 }
 
 .box .inputBox label{
@@ -72,7 +79,7 @@ body {
     top: -18px;
     left: 0;
     color: #03a9f4;
-    font-size: 15px;
+    font-size: 16px;
 }
 
 .box input[type='submit']{
